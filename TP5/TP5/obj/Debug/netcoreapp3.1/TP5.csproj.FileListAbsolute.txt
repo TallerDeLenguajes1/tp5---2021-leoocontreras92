@@ -1,0 +1,13 @@
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\bin\Debug\netcoreapp3.1\TP5.exe
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\bin\Debug\netcoreapp3.1\TP5.deps.json
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\bin\Debug\netcoreapp3.1\TP5.runtimeconfig.json
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\bin\Debug\netcoreapp3.1\TP5.runtimeconfig.dev.json
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\bin\Debug\netcoreapp3.1\TP5.dll
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\bin\Debug\netcoreapp3.1\TP5.pdb
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\obj\Debug\netcoreapp3.1\TP5.csprojAssemblyReference.cache
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\obj\Debug\netcoreapp3.1\TP5.AssemblyInfoInputs.cache
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\obj\Debug\netcoreapp3.1\TP5.AssemblyInfo.cs
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\obj\Debug\netcoreapp3.1\TP5.csproj.CoreCompileInputs.cache
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\obj\Debug\netcoreapp3.1\TP5.dll
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\obj\Debug\netcoreapp3.1\TP5.pdb
+E:\Leo\Facultad\Taller1\TPS\tp5---2021-leoocontreras92\TP5\TP5\obj\Debug\netcoreapp3.1\TP5.genruntimeconfig.cache
