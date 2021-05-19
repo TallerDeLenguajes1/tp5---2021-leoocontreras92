@@ -1,17 +1,18 @@
 ﻿using System;
 
-
 namespace TP5
 {
     class Program
     {
         static void Main(string[] args)
         {
+            string num;
             int opcion;
             do
             {
                 Console.WriteLine("Ingrese una opcion:\n Invertir numero = 1 | Calculadora = 2 | Calculadora 2.0 = 3 | Calculadora 2.1 = 4 | Salir = 0");
-                opcion = Convert.ToInt32(Console.ReadLine());
+                num = Console.ReadLine();
+                opcion = Convert.ToInt32(num);
                 if (opcion > 0 && opcion < 5)
                 {
                     switch (opcion)
@@ -25,6 +26,8 @@ namespace TP5
                             Console.Clear();
                             break;
                             case 3:
+                            ejercicio3();
+                            Console.Clear();
                             break;
                             case 4:
                             break;
@@ -52,9 +55,11 @@ namespace TP5
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("\n");
 
+            string valor;
             int num1;
             Console.WriteLine("Ingrese el numero a invertir");
-            num1 = Convert.ToInt32(Console.ReadLine());
+            valor = Console.ReadLine();
+            num1 = Convert.ToInt32(valor);
             if(num1 > 0)
             {
                 char[] numero = Convert.ToString(num1).ToCharArray();
@@ -136,6 +141,37 @@ namespace TP5
 
 
             }
+        }
+        public static void ejercicio3()
+        {
+
+            Console.WriteLine("--------------------------------------------------------------------------");
+            Console.WriteLine("--------------------------------------------------------------------------");
+            Console.WriteLine("\n");
+            Console.WriteLine("\t\t\tSelecciono la opcion Calculadora 2.0");
+            Console.WriteLine("\n");
+            Console.WriteLine("--------------------------------------------------------------------------");
+            Console.WriteLine("\n");
+
+            string valor;
+            double num;
+
+            Console.WriteLine("Ingrese el numero para calcular\nSe calculara de este: a) Valor absoluto. b) Potencia cuadrada. c) Raiz cuadrada. d) Seno. e) Coseno. f) Numero sin parte decimal");
+
+            valor = Console.ReadLine();
+            valor = String.Join(",",valor.Split("."));
+            num = Convert.ToDouble(valor);
+            Console.WriteLine("El valor absoluto de " + num + " es igual a: " + Math.Abs(num));
+            Console.WriteLine("La potencia cuadrada de " + num + " es igual a: " + Math.Pow(num, 2));
+            Console.WriteLine("La raiz cuadrada de " + num + " es igual a: " + Math.Sqrt(num));
+            Console.WriteLine("El seno de "+ num +" es igual a: " + Math.Sin(num));
+            Console.WriteLine("El coseno de " + num + " es igual a: " + Math.Cos(num));
+            Console.WriteLine("El numero " + num + " sin parte decimal es igual a: " + Math.Truncate(num));
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Presione una tecla para continuar...");
+            Console.ReadKey();
+
         }
     }
 }
