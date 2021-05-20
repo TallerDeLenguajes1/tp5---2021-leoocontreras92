@@ -6,14 +6,26 @@ namespace TP5
     {
         static void Main(string[] args)
         {
+
             string valor;
             int opcion;
             do
             {
-                Console.WriteLine("Ingrese una opcion:\n Invertir numero = 1 | Calculadora = 2 | Calculadora 2.0 = 3 | Calculadora 2.1 = 4 | Salir = 0");
+                Console.WriteLine("--------------------------------------------------------------------------");
+                Console.WriteLine("\t\t\t\tTrabajo Practico 5\n");
+                Console.WriteLine("--------------------------------------------------------------------------");
+
+                Console.WriteLine("Ingrese una opcion:\n Ejercicio 1 = 1 | Ejercicio 2 = 2 | Ejercicio 3 = 3 | Ejercicio 4 = 4 | Salir = 0");
                 valor = Console.ReadLine();
                 valor = control(valor);
-                opcion = Convert.ToInt32(valor);
+                if(valor != " ")
+                {
+                    opcion = Convert.ToInt32(valor);
+                }
+                else
+                {
+                    opcion = -1;
+                }
                 if (opcion > 0 && opcion < 5)
                 {
                     switch (opcion)
@@ -27,11 +39,11 @@ namespace TP5
                             Console.Clear();
                             break;
                             case 3:
-                            ejercicio3();
+                            Console.Clear();
+                            eleccionEjercicio3();
                             Console.Clear();
                             break;
                             case 4:
-                            ejercicio3_2();
                             Console.Clear();
                             break;
                             default:
@@ -53,19 +65,22 @@ namespace TP5
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("\n");
-            Console.WriteLine("\t\t\tSelecciono la opcion Invertir");
+            Console.WriteLine("\t\t\tSelecciono la opcion Ejercicio 1");
             Console.WriteLine("\n");
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("\n");
 
             string valor;
-            double num1;
+            double num1 = 0;
             Console.WriteLine("Ingrese el numero a invertir");
             valor = Console.ReadLine();
             valor = controlNum(valor);
-            num1 = Convert.ToDouble(valor);
+            if (valor!= " ")
+            {
+                num1 = Convert.ToDouble(valor);
+            }
 
-            if(num1 > 0)
+            if (num1 > 0)
             {
                 char[] numero = Convert.ToString(num1).ToCharArray();
                 Array.Reverse(numero);
@@ -84,20 +99,27 @@ namespace TP5
         {
             string valor, valor1, valor2;
             int opcion;
-            double numero1, numero2, resultado = 0;
+            double numero1 = 0, numero2 = 0, resultado = 0;
             char resp;
 
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("\n");
-            Console.WriteLine("\t\t\tSelecciono la opcion Calculadora");
+            Console.WriteLine("\t\t\tSelecciono la opcion Ejercicio 2");
             Console.WriteLine("\n");
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("\n");
-            Console.WriteLine("Ingrese la opcion que desea calcular: 1 = Sumar. 2 = Restar. 3 = Multiplicar. 4 = Dividir ");
+            Console.WriteLine("Ingrese la opcion que desea calcular: 1 = Sumar. 2 = Restar. 3 = Multiplicar. 4 = Dividir. 0 = Regresar al menu anterior ");
             valor = Console.ReadLine();
             valor = control(valor);
-            opcion = Convert.ToInt32(valor);
+            if (valor != " ")
+            {
+                opcion = Convert.ToInt32(valor);
+            }
+            else
+            {
+                opcion = -1;
+            }
             while (opcion != 0)
             {
 
@@ -107,13 +129,19 @@ namespace TP5
                     Console.WriteLine("Ingrese 2 numeros para calcular la operacion elegida ");
                     Console.WriteLine("Primer numero: " + (valor1 = Console.ReadLine()));
                     valor1 = controlNum(valor1);
-                    numero1 = Convert.ToDouble(valor1);
+                    if (valor1 != " ")
+                    {
+                        numero1 = Convert.ToInt32(valor1);
+                    }
                     Console.WriteLine("Segundo numero: " + (valor2 = Console.ReadLine()));
                     valor2 = controlNum(valor2);
-                    numero2 = Convert.ToDouble(valor2);
+                    if (valor2 != " ")
+                    {
+                        numero2 = Convert.ToInt32(valor2);
+                    }
                     Console.WriteLine("\n");
 
-                    if (valor1 != "0" && valor2 != "0")
+                    if (valor1 != " " && valor2 != " ")
                     {
                         switch (opcion)
                         {
@@ -155,10 +183,17 @@ namespace TP5
                 resp = Char.ToUpper(resp);
                 if(resp == 'S')
                 {
-                    Console.WriteLine("Ingrese la opcion que desea calcular: 1 = Sumar. 2 = Restar. 3 = Multiplicar. 4 = Dividir ");
+                    Console.WriteLine("Ingrese la opcion que desea calcular: 1 = Sumar. 2 = Restar. 3 = Multiplicar. 4 = Dividir. 0 = Regresar al menu anterior");
                     valor = Console.ReadLine();
                     valor = control(valor);
-                    opcion = Convert.ToInt32(valor);
+                    if (valor != " ")
+                    {
+                        opcion = Convert.ToInt32(valor);
+                    }
+                    else
+                    {
+                        opcion = -1;
+                    }
                 }
                 else
                 {
@@ -174,20 +209,23 @@ namespace TP5
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("\n");
-            Console.WriteLine("\t\t\tSelecciono la opcion Calculadora 2.0");
+            Console.WriteLine("\t\t\tSelecciono la opcion Ejercicio 3. Apartado 1");
             Console.WriteLine("\n");
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("\n");
 
             string valor;
-            double num;
+            double num = 0;
 
             Console.WriteLine("Ingrese el numero para calcular\nSe calculara de este: a) Valor absoluto. b) Potencia cuadrada. c) Raiz cuadrada. d) Seno. e) Coseno. f) Numero sin parte decimal");
 
             valor = Console.ReadLine();
             valor = controlNum(valor);
-            num = Convert.ToDouble(valor);
-            if (valor != "0")
+            if (valor != " ")
+            {
+                num = Convert.ToInt32(valor);
+            }
+            if (valor != " ")
             {
                 Console.WriteLine("El valor absoluto de " + num + " es igual a: " + Math.Abs(num));
                 Console.WriteLine("La potencia cuadrada de " + num + " es igual a: " + Math.Pow(num, 2));
@@ -212,23 +250,29 @@ namespace TP5
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("\n");
-            Console.WriteLine("\t\t\tSelecciono la opcion Calcular maximo y minimo");
+            Console.WriteLine("\t\t\tSelecciono la opcion Ejercicio 3. Apartado 2");
             Console.WriteLine("\n");
             Console.WriteLine("--------------------------------------------------------------------------");
             Console.WriteLine("\n");
 
             string valor1,valor2;
-            double num1,num2,max,min;
+            double num1 =0 ,num2 = 0 ,max,min;
 
             Console.WriteLine("Ingrese dos numero para calcular su maximo y su minimo");
             Console.WriteLine("Primer numero: " + (valor1 = Console.ReadLine()));
             valor1 = controlNum(valor1);
-            num1 = Convert.ToDouble(valor1);
+            if (valor1 != " ")
+            {
+                num1 = Convert.ToInt32(valor1);
+            }
             Console.WriteLine("Segundo numero: " + (valor2 = Console.ReadLine()));
             valor2 = controlNum(valor2);
-            num2 = Convert.ToDouble(valor2);
+            if (valor2 != " ")
+            {
+                num2 = Convert.ToInt32(valor2);
+            }
 
-            if(valor1 != "0" && valor2 != "0")
+            if (valor1 != " " && valor2 != " ")
             {
                 max = Math.Max(num1, num2);
                 min = Math.Min(num1, num2);
@@ -255,11 +299,19 @@ namespace TP5
             valor = String.Join(",", valor.Split("."));
             valor1 = String.Join(String.Empty, valor.Split(',','.'));
             char[] valores = valor1.ToCharArray();
-            while(cond == 0 && (i<valor1.Length))
+            while(cond == 0 && (i<valor1.Length) || valor.Length == 0)
             {
-                if (Char.IsDigit(valores[i])==false)
+                if (valor.Length != 0)
                 {
-                    valor = "0";
+                    if (Char.IsDigit(valores[i]) == false)
+                    {
+                        valor = " ";
+                        cond = 1;
+                    }
+                }
+                else
+                {
+                    valor = " ";
                     cond = 1;
                 }
                 i++;
@@ -273,17 +325,52 @@ namespace TP5
             int cond = 0, i = 0;
 
             char[] valores = valor.ToCharArray();
-            while (cond == 0 && (i < valor.Length))
+            while (cond == 0 && (i < valor.Length) || valor.Length == 0)
             {
-                if (Char.IsDigit(valores[i]) == false)
+                if(valor.Length != 0)
                 {
-                    valor = "-1";
+                    if (Char.IsDigit(valores[i]) == false)
+                    {
+                        valor = " ";
+                        cond = 1;
+                    }
+                }
+                else
+                {
+                    valor = " ";
                     cond = 1;
                 }
                 i++;
             }
             return valor;
         }
+        public static void eleccionEjercicio3()
+        {
+            int opcion;
+            string valor;
+            Console.WriteLine("Seleccione apartado del ejercicio 3 :\n Apartado 1 = 1 | Apartado 2 = 2\n");
+            valor = Console.ReadLine();
+            valor = control(valor);
+            if (valor != " ")
+            {
+                opcion = Convert.ToInt32(valor);
+            }
+            else
+            {
+                opcion = -1;
+            }
+            if (opcion == 1)
+            {
+                ejercicio3();
+            }
+            else
+            {
+                ejercicio3_2();
+            }
+        }
+        public static void ejercicio4()
+        {
+            
+        }
     }
-
 }
