@@ -44,6 +44,7 @@ namespace TP5
                             Console.Clear();
                             break;
                             case 4:
+                            ejercicio4();
                             Console.Clear();
                             break;
                             default:
@@ -370,7 +371,47 @@ namespace TP5
         }
         public static void ejercicio4()
         {
-            
+            string cadena, cadena2, palabra;
+            char letra;
+            int i = 0;
+
+            Console.WriteLine("Ingrese una cadena de texto");
+            cadena = Console.ReadLine();
+            Console.WriteLine("\nIngrese una letra para buscar en la cadena");
+            letra = Convert.ToChar(Console.Read());
+            Console.ReadLine();
+            if(cadena.Contains(letra))
+            {
+                Console.WriteLine("La letra " + letra + " si se encuentra en la cadena");
+            }
+            else
+            {
+                Console.WriteLine("La letra " + letra + " no se encuentra en la cadena");
+            }
+
+            Console.WriteLine("La longitud de la cadena es: " + cadena.Length);
+
+            Console.WriteLine("Ingrese una segunda cadena de texto");
+            cadena2 = Console.ReadLine();
+            Console.WriteLine("Las cadenas 1 y 2 concatenadas son: " + String.Concat(cadena, cadena2));
+            Console.WriteLine("\n");
+           /* Console.WriteLine("Ingrese una palabra para extraer de la cadena 1: " + cadena);
+            palabra = Console.ReadLine();
+            string[] arreCadena = cadena.Split(' ');
+            char[] arrePalabra = palabra.ToCharArray();
+            int x1 = 0;
+            int x2 = (palabra.Length)-1;
+            cadena2 = cadena.Substring(x1, x2);
+            Console.WriteLine(cadena2);
+            foreach( string p1 in arreCadena)
+            {
+                int x = p1.IndexOf(arrePalabra[0]);
+                Console.WriteLine("   {0}", p1.Substring(x + 2));
+            }*/
+
+            //falta terminar 
+
+            Console.ReadKey();
         }
     }
 }
